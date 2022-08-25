@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pod_class/ui/video_player/video_player.dart';
+import 'package:pod_class/ui/root_app/root_app.dart';
+import 'package:pod_class/ui/video_player_youtube/video_player_youtube.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: VideoPlayer(),
+      home: RootApp(),
     );
   }
 }
