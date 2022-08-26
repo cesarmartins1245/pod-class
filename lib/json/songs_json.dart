@@ -24,7 +24,10 @@ const List songs = [
     "song_count": "100 songs",
     "date": "about 19 hr",
     "color": Color(0xFFf69129),
-    "song_url": "songs/1.mp3",
+    // "song_url": "songs/1.mp3",
+    // "song_url":
+    //     "https://rr2---sn-vnpgoxucg-2xue.googlevideo.com/videoplayback?expire=1661546316&ei=7NoIY-KDK8qDobIP3s6XmAI&ip=2804%3A4b0%3A1237%3A5e00%3Ad89%3A2c0%3Aa008%3A35aa&id=o-AEla4fmVV3FUM5zx4PvyoWF0DHYb7RMgUq6PnpIwbd5Z&itag=22&source=youtube&requiressl=yes&mh=hI&mm=31%2C29&mn=sn-vnpgoxucg-2xue%2Csn-bg07dnks&ms=au%2Crdu&mv=m&mvi=2&pl=40&initcwndbps=1432500&vprv=1&mime=video%2Fmp4&ns=3sNybstwwXbb7PMdAuoQs3wH&cnr=14&ratebypass=yes&dur=35.990&lmt=1660339789789107&mt=1661524397&fvip=5&fexp=24001373%2C24007246&c=WEB&rbqsm=fr&txp=5432434&n=N2VPylFQG0uOW_-gxnmK&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgUozy9ImiQLF3yz8fgn3JW7RoSDYcMW_6PBWBvUwY188CIAKRPp-QSytSALB5ObLobkTGg2TQSgewUUrCcPBOBji8&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAN1GuSWxQB88MP9kSK8s3GXRPRv2XNzIe0opKev8UcLQAiAlBWz8Ev_iSfa38UUZN7PEgW_8drg-IGM1WkhoGlGeDw%3D%3D",
+    "song_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
     "songs": [
       {"title": "Imagination", "duration": "1:21"},
       {"title": "Home_", "duration": "2:17"},

@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:pod_class/_utilitys/app_config.dart';
 import 'package:pod_class/json/songs_json.dart';
@@ -234,7 +233,7 @@ class _AlbumPageState extends State<AlbumPage> {
                     }),
                 IconButton(
                     icon: Icon(
-                      Feather.more_vertical,
+                      Icons.more_vert,
                       color: white,
                     ),
                     onPressed: () {

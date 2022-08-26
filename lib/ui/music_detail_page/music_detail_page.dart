@@ -6,7 +6,6 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:pod_class/_utilitys/app_config.dart';
 
 class MusicDetailPage extends StatefulWidget {
@@ -86,10 +85,11 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
     return AppBar(
       backgroundColor: black,
       elevation: 0,
+      // ignore: prefer_const_literals_to_create_immutables
       actions: [
         IconButton(
             icon: Icon(
-              Feather.more_vertical,
+              Icons.more_vert,
               color: white,
             ),
             onPressed: null)
@@ -143,7 +143,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
-                    AntDesign.addfolder,
+                    Icons.create_new_folder_outlined,
                     color: white,
                   ),
                   Column(
@@ -156,7 +156,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                             color: white,
                             fontWeight: FontWeight.bold),
                       ),
-                      Container(
+                      SizedBox(
                         width: 150,
                         child: Text(
                           widget.description,
@@ -169,7 +169,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                     ],
                   ),
                   Icon(
-                    Feather.more_vertical,
+                    Icons.more_vert,
                     color: white,
                   ),
                 ],
@@ -219,14 +219,14 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
               children: [
                 IconButton(
                     icon: Icon(
-                      Feather.shuffle,
+                      Icons.shuffle,
                       color: white.withOpacity(0.8),
                       size: 25,
                     ),
                     onPressed: null),
                 IconButton(
                     icon: Icon(
-                      Feather.skip_back,
+                      Icons.skip_previous,
                       color: white.withOpacity(0.8),
                       size: 25,
                     ),
@@ -238,9 +238,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                           BoxDecoration(shape: BoxShape.circle, color: primary),
                       child: Center(
                         child: Icon(
-                          isPlaying
-                              ? Entypo.controller_stop
-                              : Entypo.controller_play,
+                          isPlaying ? Icons.pause : Icons.play_arrow,
                           size: 28,
                           color: white,
                         ),
@@ -261,14 +259,14 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                     }),
                 IconButton(
                     icon: Icon(
-                      Feather.skip_forward,
+                      Icons.skip_next,
                       color: white.withOpacity(0.8),
                       size: 25,
                     ),
                     onPressed: null),
                 IconButton(
                     icon: Icon(
-                      AntDesign.retweet,
+                      Icons.repeat,
                       color: white.withOpacity(0.8),
                       size: 25,
                     ),
@@ -284,7 +282,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               Icon(
-                Feather.tv,
+                Icons.tv,
                 color: primary,
                 size: 20,
               ),

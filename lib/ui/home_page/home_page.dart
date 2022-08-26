@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:pod_class/_utilitys/app_config.dart';
 import 'package:pod_class/json/songs_json.dart';
@@ -40,7 +39,7 @@ class _HomePageState extends State<HomePage> {
               style: TextStyle(
                   fontSize: 20, color: white, fontWeight: FontWeight.bold),
             ),
-            Icon(Entypo.list)
+            Icon(Icons.list),
           ],
         ),
       ),

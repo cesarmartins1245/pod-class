@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:pod_class/ui/home_page/home_page.dart';
 
 import '../../_utilitys/app_config.dart';
@@ -56,10 +55,10 @@ class _RootAppState extends State<RootApp> {
 
   Widget getFooter() {
     List items = [
-      Feather.home,
-      Feather.book,
-      Feather.search,
-      Feather.settings,
+      Icons.home,
+      Icons.menu_book,
+      Icons.search,
+      Icons.settings,
     ];
     return Container(
       height: 80,
