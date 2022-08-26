@@ -37,7 +37,6 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initPlayer();
   }
@@ -53,10 +52,12 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
         'https://rr2---sn-vnpgoxucg-2xue.googlevideo.com/videoplayback?expire=1661567976&ei=iC8JY46-J6uNobIP-MeFuAg&ip=2804%3A4b0%3A1237%3A5e00%3A352c%3Afc76%3A6d1f%3Ab165&id=o-ACk0_PSl7xDLBlH5IjJqKMRdMEN8Ra4sFSWegbHbQTZT&itag=22&source=youtube&requiressl=yes&mh=hI&mm=31%2C29&mn=sn-vnpgoxucg-2xue%2Csn-bg0eznle&ms=au%2Crdu&mv=m&mvi=2&pl=40&initcwndbps=1437500&vprv=1&mime=video%2Fmp4&ns=VOhNAr1yg00UmZb5u_4mSgAH&cnr=14&ratebypass=yes&dur=35.990&lmt=1660339789789107&mt=1661545996&fvip=2&fexp=24001373%2C24007246&beids=23886210&c=WEB&rbqsm=fr&txp=5432434&n=0mW4ZW1VmdmIo0qi7VygG&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhALxrs3bPcGWvP3KkWzOy2wZF6-kpi7orKR2y9rL49n05AiAtn0baRkf_cXnuxIk9SgJ1QcdJl5DkYoQNNeCN0m9g2A%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgMlaEe2kRBvP9Uu7ONHr0-sNlCC4DeGR7uKMu6qnse7sCIQCzanRm0ZCN3U4hXnZtbVHS9-ryKZo0xxlDJVvtWwTNDw%3D%3D');
   }
 
-  stopSound(localPath) async {
-    File audioFile = await audioCache.load(localPath);
-    await advancedPlayer.setUrl(audioFile.path);
-    advancedPlayer.stop();
+  stopSound() async {
+    await advancedPlayer.pause();
+  }
+
+  resumeSound() async {
+    await advancedPlayer.resume();
   }
 
   seekSound() async {
@@ -69,7 +70,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    stopSound(widget.songUrl);
+    stopSound();
   }
 
   @override
@@ -137,7 +138,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Container(
+            child: SizedBox(
               width: size.width - 80,
               height: 70,
               child: Row(
@@ -247,12 +248,12 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                     ),
                     onPressed: () {
                       if (isPlaying) {
-                        stopSound(widget.songUrl);
+                        stopSound();
                         setState(() {
                           isPlaying = false;
                         });
                       } else {
-                        playSound();
+                        resumeSound();
                         setState(() {
                           isPlaying = true;
                         });
