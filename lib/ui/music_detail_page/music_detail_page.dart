@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import 'package:audio_service/audio_service.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
@@ -36,7 +37,7 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
   bool isPlaying = true;
 
   @override
-  void initState() {
+  Future<void> initState() async {
     super.initState();
     initPlayer();
   }
@@ -49,7 +50,8 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
 
   playSound() async {
     await advancedPlayer.play(
-        'https://rr2---sn-vnpgoxucg-2xue.googlevideo.com/videoplayback?expire=1661807328&ei=gNYMY8WbCc2fxgTttI6gDg&ip=2804%3A4b0%3A1237%3A5e00%3Ab158%3Ad2b7%3A9065%3A5c03&id=o-AMA726LE5-AJVmTPriKBaw9G_0ujdUP4avNGBbny3phT&itag=22&source=youtube&requiressl=yes&mh=hI&mm=31%2C29&mn=sn-vnpgoxucg-2xue%2Csn-bg0eznle&ms=au%2Crdu&mv=m&mvi=2&pl=40&initcwndbps=1475000&vprv=1&mime=video%2Fmp4&ns=6JOlOd10H5-7KSaOR928ZxgH&cnr=14&ratebypass=yes&dur=35.990&lmt=1660339789789107&mt=1661785290&fvip=2&fexp=24001373%2C24007246&c=WEB&rbqsm=fr&txp=5432434&n=GT5lQF_vsYQqtb7Eonnih&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgIpiESSdkF6XHGvmnMhJaudBSJY0Fy9BW1IuPtPYlbb0CIQCJv9Y2bE_jUsfsH8erBxMlYp1Em-rflZD0bok-WeciAA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAIPv-pq6Y7DOivmao4jO2D5Cre2p0KuOPkH-gvJDFEK_AiEA77sVvXjOR5040a37FxWq6mtR_SfohU71_n6cPwfYPyE%3D');
+      'https://rr2---sn-vnpgoxucg-2xue.googlevideo.com/videoplayback?expire=1661807328&ei=gNYMY8WbCc2fxgTttI6gDg&ip=2804%3A4b0%3A1237%3A5e00%3Ab158%3Ad2b7%3A9065%3A5c03&id=o-AMA726LE5-AJVmTPriKBaw9G_0ujdUP4avNGBbny3phT&itag=22&source=youtube&requiressl=yes&mh=hI&mm=31%2C29&mn=sn-vnpgoxucg-2xue%2Csn-bg0eznle&ms=au%2Crdu&mv=m&mvi=2&pl=40&initcwndbps=1475000&vprv=1&mime=video%2Fmp4&ns=6JOlOd10H5-7KSaOR928ZxgH&cnr=14&ratebypass=yes&dur=35.990&lmt=1660339789789107&mt=1661785290&fvip=2&fexp=24001373%2C24007246&c=WEB&rbqsm=fr&txp=5432434&n=GT5lQF_vsYQqtb7Eonnih&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgIpiESSdkF6XHGvmnMhJaudBSJY0Fy9BW1IuPtPYlbb0CIQCJv9Y2bE_jUsfsH8erBxMlYp1Em-rflZD0bok-WeciAA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAIPv-pq6Y7DOivmao4jO2D5Cre2p0KuOPkH-gvJDFEK_AiEA77sVvXjOR5040a37FxWq6mtR_SfohU71_n6cPwfYPyE%3D',
+    );
   }
 
   stopSound() async {
