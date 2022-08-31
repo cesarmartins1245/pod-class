@@ -42,13 +42,12 @@ dependencies:
   youtube_player_flutter: ^8.1.0
   audio_service: ^0.18.7
   http: ^0.13.5
-  just_audio: ^0.9.28
   audio_video_progress_bar: ^0.10.0
-  flutter_vlc_player: ^7.1.5
   flutter_icons: ^1.1.0
   page_transition: ^2.0.9
   audioplayers: ^0.18.0
-  just_audio_background: ^0.0.1-beta.7
+  get_it: ^7.2.0
+  bloc: ^8.1.0
 
 dev_dependencies:
   flutter_test:

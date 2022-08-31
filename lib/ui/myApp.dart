@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:pod_class/ui/root_app/root_app.dart';
 import 'package:pod_class/ui/video_player_youtube/video_player_youtube.dart';
@@ -11,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Audio Service Demo',
       debugShowCheckedModeBanner: false,
-      home: RootApp(),
+      home: AudioServiceWidget(child: RootApp()),
     );
   }
 }
