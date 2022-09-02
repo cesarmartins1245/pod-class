@@ -5,6 +5,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:pod_class/_utilitys/app_config.dart';
 import 'package:pod_class/json/songs_json.dart';
 import 'package:pod_class/ui/music_detail_page/music_detail_page.dart';
+import 'package:pod_class/ui/music_detail_page_new/music_detail_page_new.dart';
 
 class AlbumPage extends StatefulWidget {
   final dynamic song;
@@ -84,7 +85,7 @@ class _AlbumPageState extends State<AlbumPage> {
                                 context,
                                 PageTransition(
                                     alignment: Alignment.bottomCenter,
-                                    child: MusicDetailPage(
+                                    child: MusicDetailPageNew(
                                       title: songs[index]['title'],
                                       color: songs[index]['color'],
                                       description: songs[index]['description'],
@@ -167,7 +168,7 @@ class _AlbumPageState extends State<AlbumPage> {
                           context,
                           PageTransition(
                               alignment: Alignment.bottomCenter,
-                              child: MusicDetailPage(
+                              child: MusicDetailPageNew(
                                 title: widget.song['title'],
                                 color: widget.song['color'],
                                 description: widget.song['description'],

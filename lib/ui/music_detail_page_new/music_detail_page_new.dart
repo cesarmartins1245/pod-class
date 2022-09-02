@@ -9,14 +9,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pod_class/_utilitys/app_config.dart';
 
-class MusicDetailPage extends StatefulWidget {
+class MusicDetailPageNew extends StatefulWidget {
   final String title;
   final String description;
   final Color color;
   final String img;
   final String songUrl;
 
-  const MusicDetailPage(
+  const MusicDetailPageNew(
       {Key? key,
       required this.title,
       required this.description,
@@ -28,11 +28,11 @@ class MusicDetailPage extends StatefulWidget {
   _MusicDetailPageState createState() => _MusicDetailPageState();
 }
 
-class _MusicDetailPageState extends State<MusicDetailPage> {
+class _MusicDetailPageState extends State<MusicDetailPageNew> {
   double _currentSliderValue = 20;
 
   // audio player here
-  final player = AudioPlayer();
+  late final player = AudioPlayer();
   late AudioPlayer advancedPlayer;
   late AudioCache audioCache;
   bool isPlaying = true;
@@ -43,9 +43,10 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
     initPlayer();
   }
 
-  initPlayer() {
-    advancedPlayer = AudioPlayer();
-    audioCache = AudioCache(fixedPlayer: advancedPlayer);
+  initPlayer() async {
+    // advancedPlayer = AudioPlayer();
+    // player = AudioPlayer();
+    // audioCache = AudioCache(fixedPlayer: advancedPlayer);
     playSound();
   }
 
